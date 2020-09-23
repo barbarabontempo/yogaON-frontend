@@ -1,0 +1,301 @@
+
+.login-head{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 40%;
+  height: auto;
+}
+
+.overlay-description {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 20px;
+    letter-spacing: -0.4px;
+    margin: 40px;
+  }
+  
+  .form-button {
+    cursor: pointer !important; 
+    border-radius: 20px!important;
+    border: 1px solid #ffd571;
+    background-color: #ffd571;
+    color: #ffffff;
+    font-size: 12px !important;
+    font-weight: bold !important;
+    padding: 12px 45px !important;
+    letter-spacing: 1px !important;
+    text-transform: uppercase !important;
+    transition: transform 80ms ease-in !important;
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .form-button:active {
+    transform: scale(0.95) !important;
+  }
+  
+  .form-button:focus {
+    outline: none !important;
+  }
+  
+  .form-button.ghost {
+    background-color: transparent !important;
+    border-color: #ffffff !important;
+  }
+  
+  .form-auth {
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 50px;
+    height: 100%;
+    text-align: center;
+  }
+  
+  .form-title {
+    margin-bottom: 15px;
+    color: #4E4D84;
+  }
+  
+  .input-auth {
+    background-color: #eee;
+    border: none;
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 85%;
+    text-align: center;
+    font-size: 13px;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .social-container {
+    margin: 20px 0;
+  }
+  
+  .social-container a {
+    border: 1px solid #dddddd;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    height: 40px;
+    width: 40px;
+  }
+  
+  .container {
+    margin: auto;
+    /* margin-top: 100px; */
+    margin-bottom: 50px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    position: relative;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+  }
+  
+  .form-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+  }
+  
+  .sign-in-container {
+    left: 0;
+    width: 50%;
+    z-index: 2;
+  }
+  
+  .sign-up-container {
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+  }
+  
+  .container.right-panel-active .sign-in-container {
+    transform: translateX(100%);
+  }
+  
+  .container.right-panel-active .sign-up-container {
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: show 0.6s;
+  }
+  
+  @keyframes show {
+    0%,
+    49.99% {
+        opacity: 0;
+        z-index: 1;
+    }
+  
+    50%,
+    100% {
+        opacity: 1;
+        z-index: 5;
+    }
+  }
+  
+  .overlay-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+    z-index: 100;
+  }
+  
+  .container.right-panel-active .overlay-container {
+    transform: translateX(-100%);
+  }
+  
+  .overlay {
+    background: #eac5f5;
+    /* background: -webkit-linear-gradient(to right,rgba(167, 191, 228, 0.8),rgba(128, 159, 206, 0.8));
+    background: linear-gradient(to right, #d2f6c5,rgba(139, 211, 183, 0.8), rgba(79, 211, 134, 0.8)); */
+    background-image: url(https://blog.hdwallsource.com/wp-content/uploads/2014/11/gradient-26052-26737-hd-wallpapers.jpg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+    color: #ffffff;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+  }
+  
+  .container.right-panel-active .overlay {
+    transform: translateX(50%);
+  }
+  
+  .overlay-panel {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+  }
+  
+  .overlay-left {
+    transform: translateX(-20%);
+    padding: 0;
+  }
+  
+  .container.right-panel-active .overlay-left {
+    transform: translateX(0);
+  }
+  
+  .overlay-right {
+    padding: 0;
+    right: 0;
+    transform: translateX(0);
+  }
+  
+  .container.right-panel-active .overlay-right {
+    transform: translateX(20%);
+  }
+
+
+
+
+
+
+  
+
+  .home-header {
+   text-align: center;
+  }
+
+  .blockquote {
+    text-align: center;
+    color: #4E4D84;
+  }
+
+
+
+
+  
+
+  .form-button-in{
+    cursor: pointer !important;
+    background-image: linear-gradient(to right, #f1cdd1, #b8d7f3) !important;
+ 
+    border-radius: 20px !important;
+  
+
+
+    transition: all 0.4s ease !important;
+    margin-top: 15px !important;
+    margin-bottom: 20px !important;
+    font-size: 12px !important;
+    font-weight: bold !important;
+    padding: 12px 45px !important;
+    letter-spacing: 1px !important;
+    text-transform: uppercase !important;
+    color: #ffffff !important;
+
+  }
+
+
+  .container-two:hover .form-button-in {
+    -webkit-animation: gradient 3s ease infinite !important;
+    -moz-animation: gradient 3s ease infinite !important;
+    animation: gradient 3s ease infinite !important;
+  }
+  
+  @-webkit-keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  @-moz-keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
