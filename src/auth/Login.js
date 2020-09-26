@@ -6,7 +6,7 @@ export default class Registration extends Component {
   state = {
     username: "",
     password: "",
-    loginErrors: ""
+    loginErrors: "",
   };
 
   handleSubmit = (event) => {
@@ -23,7 +23,7 @@ export default class Registration extends Component {
         if (response.data.logged_in) {
           this.props.handleSuccessfulAuth(response.data);
         }
-       })
+      })
       .catch((error) => {
         console.log("login error", error);
       });
@@ -39,14 +39,11 @@ export default class Registration extends Component {
       <div className="form-container sign-in-container">
         <form className="form-auth" onSubmit={this.handleSubmit}>
           <div className="login-form-header">
-
-            <h2 className="form-title">
-              Login
-            </h2>
+            <h2 className="form-title">Login</h2>
           </div>
-          
+
           <input
-          className="input-auth"
+            className="input-auth"
             type="text"
             name="username"
             placeholder="username"
@@ -55,7 +52,7 @@ export default class Registration extends Component {
             required
           />
           <input
-          className="input-auth"
+            className="input-auth"
             type="password"
             name="password"
             placeholder="password"
@@ -64,10 +61,12 @@ export default class Registration extends Component {
             required
           />
           <div className="container-two">
-          <button className="form-button-in" type="submit"> Login </button>
+            <button className="form-button-in" type="submit">
+              {" "}
+              Login{" "}
+            </button>
           </div>
         </form>
-       
       </div>
     );
   }

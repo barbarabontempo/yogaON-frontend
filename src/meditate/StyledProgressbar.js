@@ -1,12 +1,11 @@
 import React from 'react';
-import { CircularProgressbar } from 'react-circular-progressbar';
+import CircularProgressbar from 'react-circular-progressbar';
 
 function StyledProgressbar(props) {
-  // console.log("inside prog bar", props.text)
   return (
     <CircularProgressbar
       percentage={props.percentage}
- 
+      text={props.text}
       // Path width must be customized with strokeWidth,
       // since it informs dimension calculations.
       strokeWidth={3}
@@ -19,7 +18,7 @@ function StyledProgressbar(props) {
         // Customize the path, i.e. the part that's "complete"
         path: {
           // Tweak path color:
-          stroke: '#0086ffcc',
+          stroke: '#8F8FD3',
           // Tweak path to use flat or rounded ends:
           strokeLinecap: 'butt',
           // Tweak transition animation:

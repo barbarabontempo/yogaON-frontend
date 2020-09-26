@@ -8,11 +8,15 @@ import Meditate from "./meditate/Meditate";
 import axios from "axios";
 import Navbar from "./nav/Navbar";
 import PoseShowPage from "./components/PoseShowPage";
-import FavePoses from "./components/FavePoses"
+import FavePoses from "./components/FavePoses";
+import GoalsContainer from "./containers/GoalsContainer";
+import NewGoalForm from "./goals/NewGoalForm";
+
 export default class App extends React.Component {
   state = {
     loggedInStatus: "NOT_LOGGED_IN",
     user: {},
+    goals: [],
   };
 
   checkLoginStatus = () => {
@@ -61,14 +65,11 @@ export default class App extends React.Component {
   };
 
   render() {
-    console.log("INSIDE APPP", this.state);
     return (
       <>
         <Navbar
-          onPageChange={this.handlePageChange}
-          onSearchChange={this.handleSearchChange}
-          searchTerm={this.state.searchTerm}
           handleLogout={this.handleLogout}
+          user={this.state.user}
         />
 
         <main-stuff>
@@ -107,11 +108,19 @@ export default class App extends React.Component {
             />
 
             <Route exact path={"/favorites"}>
-              <FavePoses
-                user={this.state.user}
-
-              />
+              <FavePoses user={this.state.user} />
             </Route>
+
+            <Route exact path={"/goals"}>
+              <GoalsContainer user={this.state.user} />
+            </Route>
+
+            {/* <Route exact path={"/goals/new"}>
+              <NewGoalForm user={this.state.user}
+              onFormSubmit={this.handleAddGoal} 
+              />
+
+            </Route> */}
 
             {/* <Route path="/favorites">
               <ListingContainer
@@ -137,3 +146,9 @@ export default class App extends React.Component {
     );
   }
 }
+
+
+
+
+
+

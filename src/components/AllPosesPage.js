@@ -5,11 +5,13 @@ import Search from "./Search";
 import "./AllPoses.css";
 import PoseCollection from "./PoseCollection";
 import FavePoses from "./FavePoses";
+import DifficultyPicker from "./DifficultyPicker";
 
 export default class AllPosesPage extends Component {
   state = {
     poses: [],
-    searchTerm: ""
+    searchTerm: "",
+    selectedDifficulty: "All",
   };
 
   componentDidMount() {
@@ -26,38 +28,53 @@ export default class AllPosesPage extends Component {
       });
   }
 
-
   handleSearchChange = (searchTerm) => {
     this.setState({ searchTerm });
   };
 
 
+  setSelectedDiff = (newDifficulty) => {
+    this.setState({
+      selectedDifficulty: newDifficulty,
+    });
+  };
 
   getFilteredPoses() {
     return this.state.poses
-      .filter(pose =>
-        // filter by searchTerm
-        pose.pose_name.toLowerCase().includes(this.state.searchTerm.toLowerCase())
+      .filter(
+        (pose) =>
+          // filter by category
+          this.state.selectedDifficulty === "All" ||
+          pose.difficulty === this.state.selectedDifficulty
       )
+      .filter((pose) =>
+        // filter by searchTerm
+        pose.pose_name
+          .toLowerCase()
+          .includes(this.state.searchTerm.toLowerCase())
+      );
   }
-  
+
   render() {
-
-  const filteredPoses = this.getFilteredPoses()
-
+    const filteredPoses = this.getFilteredPoses();
 
     return (
       <>
-     
         <div className="all-poses">
           <h2> POSES </h2>
-        <Search searchTerm={this.searchTerm} handleSearchChange={this.handleSearchChange}/>
-        
+          <Search
+            searchTerm={this.searchTerm}
+            handleSearchChange={this.handleSearchChange}
+          />
+          <DifficultyPicker
+            selectedDifficulty={this.state.selectedDifficulty}
+            onDifficultyChange={this.setSelectedDiff}
+          />
 
-        <Link to="/favorites"><span>Favorites</span></Link>
-
-
-          <PoseCollection handleUpdatePose={this.handleUpdatePose} poses={filteredPoses} />
+          <PoseCollection
+            handleUpdatePose={this.handleUpdatePose}
+            poses={filteredPoses}
+          />
         </div>
       </>
     );

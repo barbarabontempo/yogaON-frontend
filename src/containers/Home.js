@@ -3,8 +3,8 @@ import Registration from "../auth/Registration";
 import Login from "../auth/Login";
 import Overlay from "../auth/Overlay";
 import "../auth/Auth.css";
-import Quotable from "../components/Quotable"
-import '../logo/yogaonlogo.png'
+import Quotable from "../components/Quotable";
+import "../logo/yogaonlogo.png";
 
 export default class Home extends Component {
   state = {
@@ -26,17 +26,18 @@ export default class Home extends Component {
     this.props.history.push("/dashboard");
   };
 
-
-  
-
   render() {
     const { handleClickSignUpButton, handleClickSignInButton } = this;
     const { rightPanelActive } = this.state;
 
     return (
       <div className="App">
-        <img className="login-head" src={require('../logo/yogaonlogo.png')} alt="loading..." />
-     
+        <img
+          className="login-head"
+          src={require("../logo/yogaonlogo.png")}
+          alt="loading..."
+        />
+
         <div
           className={`container ${
             rightPanelActive ? `right-panel-active` : ``

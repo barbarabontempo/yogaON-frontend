@@ -2,16 +2,14 @@ import React, { Component } from 'react'
 import Sound from 'react-sound'
 
 class SoundComponent extends Component {
-  constructor(props) {
-    super(props)
-    this.handleSongPlaying = this.handleSongPlaying.bind(this)
-    this.state = {
+
+  state = {
       position: 0,
       loopCount: 0,
     }
-  }
+  
 
-  handleSongPlaying({ position, duration }) {
+  handleSongPlaying = ({ position, duration }) => {
     this.setState({ position })
 
     var pos = position + this.state.loopCount * duration //loopCount to multiply for duration
@@ -25,7 +23,7 @@ class SoundComponent extends Component {
     timer.innerHTML = `${min} : ${sec}`
     this.props.funcPerc(pos / 1000)
 
-    // console.log(Math.floor(pos / 1000) + ', ' + this.props.desiredT)
+    console.log(Math.floor(pos / 1000) + ', ' + this.props.desiredT)
   }
 
   render() {

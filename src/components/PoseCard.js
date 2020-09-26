@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
 export default class PoseCard extends Component {
-
-
   render() {
     const {
       id,
@@ -16,7 +14,7 @@ export default class PoseCard extends Component {
       benefits,
       image_url,
       video_url,
-      like
+      like,
     } = this.props.pose;
 
     return (
@@ -27,8 +25,6 @@ export default class PoseCard extends Component {
         <Link to={`/poses/${id}`}>
           <img src={image_url} alt="no pic" className="card-media" />
         </Link>
-
-
       </li>
     );
   }
