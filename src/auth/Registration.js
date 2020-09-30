@@ -9,35 +9,34 @@ export default class Registration extends Component {
     email: "",
     password: "",
     password_confirmation: "",
-    registrationErrors: "",
   };
 
   handleSubmit = (event) => {
     event.preventDefault();
-    axios
-      .post(
-        "http://localhost:3000/registrations",
-        { user: this.state },
-        {
-          withCredentials: true,
-        }
-      )
-      .then((response) => {
-        if (response.data.status === "created") {
-          this.props.handleSuccessfulAuth(response.data);
-        }
-      })
-      .catch((error) => {
-        console.log("registration error", error);
+    fetch("http://localhost:3000/users", {
+      method: "POST",
+      credentials: "include",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(this.state),
+    })
+      .then((r) => r.json())
+      .then((user) => {
+        this.props.handleLogin(user);
       });
   };
+  
 
   handleChange = (event) => {
     this.setState({
       [event.target.name]: event.target.value,
     });
   };
+
   render() {
+    const { name, username, email, password, password_confirmation } = this.state;
+
     return (
       <div className="form-container sign-up-container">
         <form className="form-auth" onSubmit={this.handleSubmit}>
@@ -48,7 +47,7 @@ export default class Registration extends Component {
             type="text"
             name="name"
             placeholder="Name"
-            value={this.state.name}
+            value={name}
             onChange={this.handleChange}
             required
           />
@@ -58,7 +57,7 @@ export default class Registration extends Component {
             type="text"
             name="username"
             placeholder="username"
-            value={this.state.username}
+            value={username}
             onChange={this.handleChange}
             required
           />
@@ -68,7 +67,7 @@ export default class Registration extends Component {
             type="email"
             name="email"
             placeholder="email"
-            value={this.state.email}
+            value={email}
             onChange={this.handleChange}
             required
           />
@@ -78,7 +77,7 @@ export default class Registration extends Component {
             type="password"
             name="password"
             placeholder="password"
-            value={this.state.password}
+            value={password}
             onChange={this.handleChange}
             required
           />
@@ -88,7 +87,7 @@ export default class Registration extends Component {
             type="password"
             name="password_confirmation"
             placeholder="password confirmation"
-            value={this.state.password_confirmation}
+            value={password_confirmation}
             onChange={this.handleChange}
             required
           />

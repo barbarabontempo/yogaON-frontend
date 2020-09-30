@@ -12,10 +12,10 @@ export default class PoseCollection extends Component {
         />
       );
     });
-    console.log("inside collection", this.props);
+    // console.log("inside collection", this.props);
     return (
       <>
-        <h1> pose collection </h1>
+
         <ul className="card-container">{allPoses}</ul>
       </>
     );

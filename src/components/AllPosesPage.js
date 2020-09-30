@@ -61,7 +61,9 @@ export default class AllPosesPage extends Component {
     return (
       <>
         <div className="all-poses">
-          <h2> POSES </h2>
+      <div className="search-cont"> 
+      
+          {/* <h2> POSES </h2> */}
           <Search
             searchTerm={this.searchTerm}
             handleSearchChange={this.handleSearchChange}
@@ -70,7 +72,7 @@ export default class AllPosesPage extends Component {
             selectedDifficulty={this.state.selectedDifficulty}
             onDifficultyChange={this.setSelectedDiff}
           />
-
+</div>
           <PoseCollection
             handleUpdatePose={this.handleUpdatePose}
             poses={filteredPoses}

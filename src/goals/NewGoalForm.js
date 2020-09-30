@@ -19,13 +19,14 @@ export default class NewGoalForm extends Component {
     event.preventDefault();
     fetch("http://localhost:3000/pose_goals", {
       method: "POST",
+      credentials: "include",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
         pose_name: this.state.pose_name,
         description: this.state.description,
-        user_id: 1,
+        user_id: this.props.userId,
       }),
     })
       .then((r) => r.json())
@@ -35,6 +36,7 @@ export default class NewGoalForm extends Component {
   };
 
   render() {
+ 
     return (
       <div>
         <h2>New GOAL</h2>

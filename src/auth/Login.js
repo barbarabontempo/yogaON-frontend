@@ -6,26 +6,22 @@ export default class Registration extends Component {
   state = {
     username: "",
     password: "",
-    loginErrors: "",
   };
 
   handleSubmit = (event) => {
     event.preventDefault();
-    axios
-      .post(
-        "http://localhost:3000/sessions",
-        { user: this.state },
-        {
-          withCredentials: true,
-        }
-      )
-      .then((response) => {
-        if (response.data.logged_in) {
-          this.props.handleSuccessfulAuth(response.data);
-        }
-      })
-      .catch((error) => {
-        console.log("login error", error);
+    fetch("http://localhost:3000/login", {
+      method: "POST",
+      credentials: "include",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(this.state),
+    })
+      .then((r) => r.json())
+      .then((user) => {
+       
+        this.props.handleLogin(user);
       });
   };
 

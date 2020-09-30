@@ -1,4 +1,5 @@
 import React from "react";
+import "./AllPoses.css";
 
 const Search = (props) => {
   // console.log(props)

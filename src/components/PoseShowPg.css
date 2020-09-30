@@ -1,0 +1,26 @@
+.showpg-container {
+  border: solid red;
+  list-style-type: none;
+  padding: 0 50px 0px 50px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-top: 10%;
+  align-items: flex-start;
+  justify-content:flex-start;
+}
+.showpg-item {
+  /* color: #fff; */
+  background: rgb(60, 60, 60);
+  background: rgba(165, 164, 164, 0.4);
+}
+
+.img {
+  width: 100%;
+  opacity: 1;
+  display: block;
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+}

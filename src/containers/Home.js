@@ -21,10 +21,7 @@ export default class Home extends Component {
       rightPanelActive: false,
     });
 
-  handleSuccessfulAuth = (data) => {
-    this.props.handleLogin(data);
-    this.props.history.push("/dashboard");
-  };
+ 
 
   render() {
     const { handleClickSignUpButton, handleClickSignInButton } = this;
@@ -44,8 +41,8 @@ export default class Home extends Component {
           }`}
           id="container"
         >
-          <Login handleSuccessfulAuth={this.handleSuccessfulAuth} />
-          <Registration handleSuccessfulAuth={this.handleSuccessfulAuth} />
+          <Login handleLogin={this.props.handleLogin} />
+          <Registration handleLogin={this.props.handleLogin} />
           <Overlay
             handleClickSignInButton={handleClickSignInButton}
             handleClickSignUpButton={handleClickSignUpButton}

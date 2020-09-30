@@ -1,9 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+
 .mainpage-container { 
   display: flex !important;
   flex-direction: column !important;
   /* height: 100% !important; */
   /* border: solid blue !important; */
-  margin-top: 10%;
+  margin-top: 150px;
 }
 
 
@@ -14,26 +19,44 @@ main {
   align-items: center !important;
   justify-content: center !important;
   /* border: solid black !important; */
-  border-radius: 10px !important;
+  border-radius: 8px !important;
   box-shadow: -1px 2px 4px rgba(0, 0, 0, 0.25), 1px 1px 3px rgba(0, 0, 0, 0.1);
   background-color: #FBF7FB !important;
-  margin: 0 20px !important;
+  margin: 0 15px !important;
 
 }
 
 #background-video{
     width: 60% !important;
-    /* border: solid red !important; */
-    margin: auto;
+    margin: 3px;
 }
 
 
 .left-container{
   /* border: solid purple; */
-  margin: 0% 0% 0% 10%;
+  /* margin: 0% 0% 0% 5%; */
   /* padding: 5%; */
 }
 
 .yoga-par{
   font-size: 125%;
+color: #4E4D84;
+/* margin: 0% 0% 0% 5%; */
+margin: 10%;
+
+}
+
+.yoga-head{
+  font-family: 'Yeseva One', cursive !important;
+  font-size: 275% !important;
+  color: #4E4D84;
+  margin: 0% 0% 0% 5%;
+}
+
+a.pose-link h2{
+  font-family: 'Lora', serif !important;
+  margin: 0% 0% 0% 10% !important;
+  color: #4E4D84;
+ 
+
 }

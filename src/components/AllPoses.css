@@ -1,8 +1,46 @@
 .all-poses {
-  border: solid orange !important;
+  /* border: solid orange !important; */
   margin-top: 10%;
 }
 
+.search {
+  flex: 1 1 auto;
+  padding: 0.5rem;
+  display: flex;
+  width: 50%;
+  margin-bottom: 10px;
+  margin-left: 50px;
+}
+
+.search input[type="text"] {
+  font-size: 1rem;
+  border-top-left-radius: 3rem;
+  border-bottom-left-radius: 3rem;
+  border-top: 1px solid var(--gray);
+  border-left: 1px solid var(--gray);
+  border-bottom: 1px solid var(--gray);
+  width: 90%;
+  padding: 1rem;
+  padding-left: 2rem;
+  transition: all 0.2s;
+}
+
+.search input[type="submit"] {
+  font-size: 1.5rem;
+  padding: 0 1rem;
+  text-shadow: 0 0 0 var(--gray);
+  border-top-right-radius: 3rem;
+  border-bottom-right-radius: 3rem;
+  border-top: 1px solid var(--gray);
+  border-right: 1px solid var(--gray);
+  border-bottom: 1px solid var(--gray);
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+.search-cont {
+  /* box-shadow: -1px 2px 4px rgba(0, 0, 0, 0.25), 1px 1px 3px rgba(0, 0, 0, 0.1); */
+}
 /* html {
     background-color: #ededed;
     font: normal 14px / 20px 'Roboto', sans-serif;
@@ -27,7 +65,9 @@
 }
 
 .card {
-  background-color: #fff;
+  /* background-color: #fff; */
+  background-image: url(https://static-cse.canva.com/blob/140234/Rainbow-Gradient-Pink-and-Purple-Zoom-Virtual-Background.png);
+  /* background-image: url(https://image.freepik.com/free-photo/smoke-abstract-background-light-pastel-colors_89245-89.jpg); */
   border-radius: 15px;
   box-shadow: -1px 2px 4px rgba(0, 0, 0, 0.25), 1px 1px 3px rgba(0, 0, 0, 0.1);
   margin: 20px;
@@ -91,19 +131,38 @@
 
 .pose-diff {
   display: flex;
-  align-items: stretch; /* Default */
-  justify-content: space-between;
   width: 100%;
   margin: 0;
   padding: 0;
+  margin-left: 2%;
+  gap: 5%;
 }
 
 .pose-diff li {
   display: block;
+  font-family: 'Yeseva One', cursive !important;
   flex: 0 1 auto; /* Default */
   list-style-type: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #4E4D84; 
+}
+
+.pose-diff li.active {
+  border-bottom: 2px solid #4E4D84;
+}
+
+.diff-cont p {
+  font-size: 20px;
+  font-family: 'Yeseva One', cursive !important;
+  margin: 0 !important;
+  line-height: 16px !important;
+  color: #4E4D84; 
 }
 
 .diff-cont {
+  margin-top: 35px;
+  margin-bottom: 35px;
   display: flex;
+  margin-left: 75px;
 }

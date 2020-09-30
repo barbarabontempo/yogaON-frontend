@@ -35,12 +35,12 @@
 
 #btn-med {
   background: none;
-  border: 2px #8F8FD3 solid;
+  border: 2px #7877C7 solid;
   padding: 16px;
   width: 130px;
   /* box-shadow: #000000fa 1px 1px 2px 0; */
   border-radius: 20px;
-  color: #8F8FD3;
+  color: #7877C7;
   font-size: 16px;
   font-weight: bolder;
   transition: all 0.3s ease;
@@ -49,7 +49,7 @@
 #btn-med:hover {
   box-shadow: none;
   color: white;
-  background-color: #8F8FD3;
+  background-color: #7877C7;
   border: none;
   width: 140px;
   padding: 24px;
@@ -59,7 +59,7 @@
 button#btn-med.activemed {
   box-shadow: none;
   color: white;
-  background-color: #8F8FD3;
+  background-color: #7877C7;
   border: none;
   width: 140px;
   padding: 24px;
@@ -69,7 +69,7 @@ button#btn-med.activemed {
 #btn-med.activemed {
   box-shadow: none;
   color: white;
-  background-color: #8F8FD3;
+  background-color: #7877C7;
   border: none;
   width: 140px;
   padding: 24px;
