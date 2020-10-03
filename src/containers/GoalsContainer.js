@@ -77,7 +77,8 @@ export default class GoalsContainer extends Component {
 
     return (
       <div className="goals-container">
-        <h1>Goals</h1>
+        <h1 className="goal-head"> Turn your goals into actions!</h1>
+        <span className="sub-tit">Let's set up some goals! Get started by filling in the blanks below.</span>
         <NewGoalForm
           onFormSubmit={this.handleAddGoal}
           userId={this.props.user.id}

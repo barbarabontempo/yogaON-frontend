@@ -1,26 +1,169 @@
 .showpg-container {
-  border: solid red;
   list-style-type: none;
   padding: 0 50px 0px 50px;
   display: flex;
   gap: 10px;
   flex-direction: column;
   flex-wrap: wrap;
-  margin-top: 10%;
+  margin-top: 7%;
   align-items: flex-start;
-  justify-content:flex-start;
+  justify-content: flex-start;
+  text-align: center;
+  /* background: rgb(60, 60, 60);
+  background: rgba(165, 164, 164, 0.4); */
 }
 .showpg-item {
   /* color: #fff; */
-  background: rgb(60, 60, 60);
   background: rgba(165, 164, 164, 0.4);
 }
 
-.img {
-  width: 100%;
-  opacity: 1;
-  display: block;
+.media {
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.showpg-img {
+  border-radius: 10px;
+  display: inline-block;
   height: 300px;
-  width: 300px;
-  object-fit: cover;
+  width: 600px;
+  /* background-color: #f4eeff; */
+  background-image: url(https://static-cse.canva.com/blob/140234/Rainbow-Gradient-Pink-and-Purple-Zoom-Virtual-Background.png);
+  box-shadow: -1px 2px 4px rgba(0, 0, 0, 0.25), 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.show-vid {
+  display: inline-block;
+  border-radius: 10px;
+  border: none;
+  box-shadow: -1px 2px 4px rgba(0, 0, 0, 0.25), 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.head-child {
+  font-size: 325%;
+  font-family: "Yeseva One", cursive !important;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 0;
+  margin-top: 35px !important;
+}
+
+.head-tran {
+  margin-right: auto;
+  font-family: "Yeseva One", cursive !important;
+  margin-left: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.head-child-eng {
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 0;
+  font-family: "Yeseva One", cursive !important;
+}
+
+.diff-cat {
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+p span {
+  color: black;
+  text-shadow: 1px 0 #888888;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-family: "Yeseva One", cursive !important;
+  font-size: 128%;
+}
+
+.diff {
+  display: inline-block;
+  font-size: 108%;
+}
+
+.category {
+  display: inline-block;
+  font-size: 108%;
+}
+
+.desc::-webkit-scrollbar {
+  display: none;
+}
+
+.desc {
+  width: 580px; 
+  border: 1px solid #000000;
+  font-size: 108%;
+  height: 145px;
+  overflow:scroll;
+    overflow-x:hidden;
+    padding-top: 5px !important;
+}
+
+.desc span{
+  word-break: break-all;
+  font-size: 108%;
+  padding: 10px;
+  margin: auto;
+}
+
+.benefits::-webkit-scrollbar {
+  display: none;
+}
+
+.benefits {
+  width: 580px; 
+  border: 1px solid #000000;
+  font-size: 108%;
+  height: 145px;
+  overflow:scroll;
+    overflow-x:hidden;
+   padding-top: 5px !important;
+}
+
+.benefits span{
+  word-break: break-all;
+  font-size: 108%;
+  
+}
+
+.deets{
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 5px;
+}
+
+.desc{
+  display: inline-block;
+  box-shadow: -1px 2px 4px rgba(0, 0, 0, 0.25), 1px 1px 3px rgba(0, 0, 0, 0.1);
+  border: none !important;
+  border-radius: 10px !important;
+  width: 580px !important;
+  /* background-color: #f4eeff; */
+  background-image: url(https://static-cse.canva.com/blob/140234/Rainbow-Gradient-Pink-and-Purple-Zoom-Virtual-Background.png);
+}
+
+.benefits{
+  display: inline-block;
+  
+  box-shadow: -1px 2px 4px rgba(0, 0, 0, 0.25), 1px 1px 3px rgba(0, 0, 0, 0.1);
+  border: none !important;
+  border-radius: 10px !important;
+  /* background-color: #f4eeff; */
+  background-image: url(https://static-cse.canva.com/blob/140234/Rainbow-Gradient-Pink-and-Purple-Zoom-Virtual-Background.png);
+}
+
+.diffy{
+  margin: 10px;
 }

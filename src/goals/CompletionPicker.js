@@ -8,7 +8,7 @@ class DifficultyPicker extends React.Component {
     console.log(this.props);
     return (
       <div className="comp-cont">
-        <p>Goal status:</p>
+        {/* <p>Goals:</p> */}
         <ul className="goal-comp">
           <li
             className={this.props.selectedCompletion === "All" ? "active" : ""}
@@ -18,19 +18,17 @@ class DifficultyPicker extends React.Component {
           </li>
           <li
             className={
-              this.props.selectedCompletion === "Still going strong!" ? "active" : ""
+              this.props.selectedCompletion === "in progress" ? "active" : ""
             }
             onClick={() => this.props.onCompChange(null)}
-          >
-            Still going strong!
-          </li>
+          >Pending...</li>
           <li
             className={
               this.props.selectedCompletion === "Done and done!" ? "active" : ""
             }
             onClick={() => this.props.onCompChange(true)}
           >
-            Done and done!
+            DONE!
           </li>
         </ul>
       </div>

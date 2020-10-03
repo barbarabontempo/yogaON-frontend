@@ -17,8 +17,8 @@ export default class GoalCollection extends Component {
     console.log("goal collection", this.props.goals);
     return (
       <div>
-        <h1>Goal collection</h1>
-        <ul className="card-container">{allGoals}</ul>
+    
+        <ul className="gcard-container">{allGoals}</ul>
       </div>
     );
   }

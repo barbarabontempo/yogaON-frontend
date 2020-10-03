@@ -1,4 +1,352 @@
-.goals-container{
-    border: solid springgreen;
-    margin-top: 20%;
+.goals-container {
+  margin-top: 8%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
+
+.goal-form {
+  padding: 0.5rem;
+  display: flex;
+  margin-bottom: 10px;
+
+  justify-content: center;
+  gap: 15px;
+}
+
+.goal-form input[type="text"] {
+  font-size: 1.7rem;
+  color: #4e4d84;
+  border-bottom: solid #36365c;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  width: 18%;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  transition: all 0.2s;
+  background: none;
+  padding-bottom: 5px;
+  font-family: "Yeseva One", cursive !important;
+}
+
+.goal-form input:focus {
+  outline: none;
+}
+
+.goal-form select[type="text"] {
+  border: none !important;
+}
+
+.goal-form input[type="submit"] {
+  cursor: pointer !important;
+  background-color: #4e4d84;
+  border-radius: 20px !important;
+  transition: all 0.4s ease !important;
+  /* margin-top: 15px !important; */
+  /* margin-bottom: 20px !important; */
+  font-size: 12px !important;
+  font-weight: bold !important;
+  padding: 12px 25px !important;
+  letter-spacing: 1px !important;
+  text-transform: uppercase !important;
+  color: #ffffff !important;
+  border: none;
+}
+
+.goal-form label {
+  font-size: 1.8rem;
+  color: #4e4d84;
+  margin-top: 15px;
+  font-family: "Yeseva One", cursive !important;
+}
+
+.dd-menu button,
+select {
+  background: none;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: solid #36365c;
+  font-size: 1.8rem;
+  color: #4e4d84;
+  font-size: 1.5rem !important;
+  font-family: "Yeseva One", cursive !important;
+}
+
+.dd-menu button,
+select:focus {
+  outline: none;
+}
+
+.goal-head {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px !important;
+  font-family: "Yeseva One", cursive !important;
+  font-size: 3rem;
+  color: #36365c;
+}
+
+.sub-tit {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.3rem;
+  font-style: italic;
+  margin-bottom: 3.5%;
+  color: #36365c;
+}
+
+.goal-comp {
+  display: flex;
+
+  padding: 0;
+  margin-left: 30%;
+  justify-content: space-between;
+  gap: 50%;
+}
+
+.goal-comp li {
+  display: inline-block;
+  font-family: "Yeseva One", cursive !important;
+  flex: 0 1 auto; /* Default */
+  list-style-type: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #4e4d84;
+}
+
+.goal-comp li.active {
+  border-bottom: 2px solid #4e4d84;
+}
+
+.comp-cont p {
+  font-size: 20px;
+  font-family: "Yeseva One", cursive !important;
+  margin: 0 !important;
+  line-height: 16px !important;
+  color: #4e4d84;
+}
+
+.comp-cont {
+  margin-top: 35px;
+  margin-bottom: 35px;
+  display: flex;
+  margin-left: 75px;
+}
+
+.desc {
+  width: 140px;
+  border: 1px solid #000000;
+}
+
+.desc span {
+  word-break: break-all;
+}
+
+.gcard {
+  /* background-color: #fff; */
+  background-image: url(https://static-cse.canva.com/blob/140234/Rainbow-Gradient-Pink-and-Purple-Zoom-Virtual-Background.png);
+  /* background-image: url(https://image.freepik.com/free-photo/smoke-abstract-background-light-pastel-colors_89245-89.jpg); */
+  border-radius: 15px;
+  box-shadow: -1px 2px 4px rgba(0, 0, 0, 0.25), 1px 1px 3px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+
+  max-width: 500px;
+  max-height: 550px;
+  padding: 10px;
+}
+
+.gcard-container::-webkit-scrollbar {
+  display: none;
+}
+
+.gcard-container {
+  list-style-type: none;
+  padding: 0px;
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 880px;
+  overflow: scroll;
+  overflow-x: hidden;
+
+  /* box-shadow: -1px 2px 4px rgba(0, 0, 0, 0.25), 1px 1px 3px rgba(0, 0, 0, 0.1); */
+}
+
+.card-media {
+  /* width: 100%; */
+  opacity: 1;
+  display: block;
+  height: 300px;
+  /* width: 300px; */
+  object-fit: cover;
+}
+
+.card-details {
+  padding: 5px 15px;
+}
+
+.card-head {
+  font-weight: 400;
+}
+
+.card-head {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+/* BUTONS */
+
+.card-action-button:hover {
+  background-color: rgba(255, 168, 58, 0.2);
+}
+
+.gcard-title {
+  text-align: center;
+  font-family: "Yeseva One", cursive !important;
+  margin-top: 5% !important;
+  margin-bottom: 0;
+  color: #36365c;
+}
+
+.gcard-subtitle {
+  text-align: center;
+  font-family: "Yeseva One", cursive !important;
+  font-size: 1.7rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #36365c !important;
+}
+
+.gset-on {
+  text-align: center;
+  font-style: italic;
+  margin-top: 0;
+}
+
+.gcard li {
+  list-style-type: none;
+  margin: 0 0 5px 0;
+}
+
+.logs-ul::-webkit-scrollbar {
+    display: none;
+  }
+
+
+.logs-ul {
+  list-style-type: none;
+  padding: 15px;
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 230px;
+  overflow: scroll;
+  overflow-x: hidden;
+  box-shadow: -1px 2px 4px rgba(0, 0, 0, 0.25), 1px 1px 3px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  border-radius: 10px;
+   background-color: #D7E2F2;
+  /* box-shadow: -1px 2px 4px rgba(0, 0, 0, 0.25), 1px 1px 3px rgba(0, 0, 0, 0.1); */
+}
+
+
+.log-form{
+    display: flex;  
+    padding: 0.5rem;
+
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.log-form input[type="text"] {
+    font-size: 1rem;
+  
+    
+    
+    color: #4E4D84;
+    border-top-left-radius: 3rem;
+    border-bottom-left-radius: 3rem;
+    border-top: 1px solid var(--gray);
+    border-left: 1px solid var(--gray);
+    border-bottom: 1px solid var(--gray);
+    width: 90%;
+    padding: 1rem;
+    padding-left: 2rem;
+    transition: all 0.2s;
+    background-color: #D7E2F2;
+    /* background-image: url(https://static-cse.canva.com/blob/140234/Rainbow-Gradient-Pink-and-Purple-Zoom-Virtual-Background.png); */
+    border-right: none;
+    box-shadow: -1px 2px 4px rgba(0, 0, 0, 0.25), 1px 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  .log-form input[type="submit"] {
+    font-size: 1.5rem;
+    padding: 0 1rem;
+    text-shadow: 0 0 0 var(--gray);
+    border-top-right-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+    border-top: 1px solid var(--gray);
+    border-right: 1px solid var(--gray);
+    border-bottom: 1px solid var(--gray);
+    border-left: none;
+    cursor: pointer;
+    transition: all 0.1s;
+    background-color: #D7E2F2;
+    /* background-image: url(https://static-cse.canva.com/blob/140234/Rainbow-Gradient-Pink-and-Purple-Zoom-Virtual-Background.png); */
+    box-shadow: -1px 2px 4px rgba(0, 0, 0, 0.25), 1px 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+
+.done{
+    
+    cursor: pointer !important;
+    background-color: #4e4d84;
+    border-radius: 20px !important;
+    transition: all 0.4s ease !important;
+    /* margin-top: 15px !important; */
+    /* margin-bottom: 20px !important; */
+    font-size: 12px !important;
+    font-weight: bold !important;
+    padding: 12px 25px !important;
+    letter-spacing: 1px !important;
+    text-transform: uppercase !important;
+    color: #ffffff !important;
+    border: none;
+}
+.delete{
+    cursor: pointer !important;
+    background-color: #4e4d84;
+    border-radius: 20px !important;
+    transition: all 0.4s ease !important;
+    /* margin-top: 15px !important; */
+    /* margin-bottom: 20px !important; */
+    font-size: 12px !important;
+    font-weight: bold !important;
+    padding: 12px 25px !important;
+    letter-spacing: 1px !important;
+    text-transform: uppercase !important;
+    color: #ffffff !important;
+    border: none;
+}
+
+
+.da-btns{
+display: flex;
+gap: 50%;
+justify-content: center;
+}
+
+
+.log-form input:focus {
+    outline: none;
+  }
+
+
+
+  .log-form input[type="submit"]:focus{
+    outline: none;
+  }

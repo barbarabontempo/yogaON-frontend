@@ -39,32 +39,36 @@ export default class NewLogForm extends Component {
       .then((newLog) => {
         this.props.onFormSubmit(newLog);
       });
+      this.setState(({
+        description: ""
+       }))
   };
 
   render() {
 
     return (
       <div>
-        <h2>New LOG</h2>
-        <form onSubmit={this.handleSubmit}>
-          <label htmlFor="description">Description: </label>
+        <h2>Track your progress!</h2>
+        <form className="log-form" onSubmit={this.handleSubmit}>
+    
           <input
             type="text"
             name="description"
+            placeholder="How was your practice?"
             value={this.state.description}
             onChange={this.handleChange}
           />
 
-          <label htmlFor="pose_name">Image: </label>
+          {/* <label htmlFor="pose_name">Image: </label>
           <input
             type="text"
             name="image"
             value={this.state.pose_name}
             onChange={this.handleChange}
-          />
+          /> */}
       
 
-          <input type="submit" value="Submit" />
+          <input type="submit" value="≫" />
         </form>
       </div>
     );

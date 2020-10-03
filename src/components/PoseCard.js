@@ -1,8 +1,14 @@
-import React, { Component } from "react";
+import React, { Component, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-export default class PoseCard extends Component {
-  render() {
+
+
+export default function PoseCard(props) {
+
+ 
+
+
+  
     const {
       id,
       pose_name,
@@ -15,10 +21,10 @@ export default class PoseCard extends Component {
       image_url,
       video_url,
       like,
-    } = this.props.pose;
+    } = props.pose;
 
     return (
-      <li className="card">
+      <li  className="card">
         <h1 className="card-title">{pose_name}</h1>
         <p className="card-subtitle">{sanskirt_name}</p>
 
@@ -27,5 +33,5 @@ export default class PoseCard extends Component {
         </Link>
       </li>
     );
-  }
+  
 }

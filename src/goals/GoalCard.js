@@ -67,28 +67,33 @@ export default class PoseCard extends Component {
 
     let poseLogs = this.state.logs.map((log) =>
       log.pose_goal_id === this.props.goal.id ? (
-      <li>{log.date} {log.description}</li>
+      <li>{log.date}: {log.description}</li>
       ) : null
     );
 
 console.log("THE POSE LOGSZZZ", this.props.goal.id)
 
     return (
-      <li className="card">
-        <h1 className="card-title">{pose_name}</h1>
-        <span> {date}</span>
-        <p className="card-subtitle">{description}</p>
-        <ul>
-          <li>Logs: {poseLogs} </li>
+      <li className="gcard">
+        <h3 className="gcard-subtitle">My goal: I want to   {description} the {pose_name} pose.</h3>
+        <h3 className="gset-on">Set on: {date}</h3>
+       
+
+        <ul className="logs-ul">
+          <li>My progress:
+
+            {poseLogs} </li>
         </ul>
 
-        <button onClick={this.handleDoneClick}>I DID IT!</button>
         <NewLogForm
           goalId={id}
           userId={user_id}
           onFormSubmit={this.handleAddLog}
         />
-        <button onClick={this.handleDeleteClick}>Delete</button>
+        <div className="da-btns">
+        <button className="done" onClick={this.handleDoneClick}>I did it!</button>
+        <button className="delete" onClick={this.handleDeleteClick}>Delete</button>
+        </div>
       </li>
     );
   }

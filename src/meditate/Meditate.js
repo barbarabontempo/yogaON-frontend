@@ -15,7 +15,7 @@ const rainAudio = "audio/rain.mp3";
 
 const streamAudio = "audio/stream.mp3";
 const wavesAudio = "audio/waves.mp3";
-
+const songAudio = "audio/mysong.mp3"
 const loudVolumeIcon = "svg/volume-2.svg";
 const quietVolumeIcon = "svg/volume-1.svg";
 const noVolumeIcon = "svg/volume-x.svg";
@@ -25,7 +25,7 @@ class Meditate extends Component {
     pbuttonUrl: playButton,
     audioStatus: Sound.status.STOPPED,
     timeValues: [120, 300, 600, 900],
-    audioNames: ["Rain", "Stream", "Waves"],
+    audioNames: ["Rain", "Stream", "Waves", "Dance"],
     seekCurrentPosition: 0,
     audioUrl: rainAudio, // Default
     desiredTime: 120, // Default
@@ -67,6 +67,10 @@ class Meditate extends Component {
     } else if (x === this.state.audioNames[2]) {
       this.setState({
         audioUrl: wavesAudio,
+      });
+    } else if (x === this.state.audioNames[3]) {
+      this.setState({
+        audioUrl: songAudio,
       });
     } else {
       this.setState({
@@ -194,7 +198,7 @@ class Meditate extends Component {
                 alt=""
               />
               &nbsp;
-              <div className="volume-slider">
+              <div className="volume-slider" style={{color: "purple"}}>
                 <input
                   onChange={this.volumeChange}
                   style={{color: "purple"}}

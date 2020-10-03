@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import Iframe from "react-iframe";
 import "./PoseShowPg.css";
 
-
 class PoseShowPage extends React.Component {
   state = {
     pose: "",
@@ -36,41 +35,58 @@ class PoseShowPage extends React.Component {
     return (
       <>
         <div className="showpg-container">
-          <div className="showpg-item">
-            <h1>{pose_name} </h1>
-          </div>
-          <div className="showpg-item">
-            <h2>{sanskirt_name} </h2>
-          </div>
-          <div className="showpg-item">
-            <h3>{translation}</h3>
-          </div>
-          <div className="showpg-item">
-            <p>{category} </p>
-          </div>
-          <div className="showpg-item">
-            <p> {difficulty}</p>
-          </div>
-          <div className="showpg-item">
-            <p> {description}</p>
-          </div>
-          <div className="showpg-item">
-            <p>{benefits}</p>
-          </div>
-          <div className="showpg-item">
-            <img src={image_url} alt="no pic" className="img" />
-          </div>
-          <div className="showpg-item">
+          <h1 className="head-child">{sanskirt_name} </h1>
+          <h3 className="head-tran">Translation: {translation}</h3>
+          <h1 className="head-child-eng">{pose_name} </h1>
+
+          
+          <div className="media">
+            <img src={image_url} alt="no pic" className="showpg-img" />
+
             <Iframe
               url={video_url}
-              width="550px"
-              height="400px"
+              width="600px"
+              height="300px"
               id="pg-vid"
-              className="vid"
+              className="show-vid"
               display="initial"
               position="relative"
             />
           </div>
+       
+
+        <div className="diff-cat">
+        <p className="diff">
+          {" "}
+          <span>Difficulty: </span> 
+          {difficulty}
+        </p>
+        <p className="category">
+          <span>Category: </span>{" "}
+          {category}
+        </p>
+ </div>
+
+<div className="deets"> 
+        <p className="desc">
+          {" "}
+          
+          <span>Description </span>
+          <p className="diffy">
+            
+          {description}
+          </p>
+        </p>
+        <p className="benefits">
+        <span>Benefits </span>
+        <p className="diffy">
+
+          {benefits}
+        </p>
+        </p>
+        </div>
+
+
         </div>
       </>
     );

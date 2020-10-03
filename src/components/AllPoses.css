@@ -14,6 +14,10 @@
 
 .search input[type="text"] {
   font-size: 1rem;
+
+  
+  
+  color: #4E4D84;
   border-top-left-radius: 3rem;
   border-bottom-left-radius: 3rem;
   border-top: 1px solid var(--gray);
@@ -23,6 +27,9 @@
   padding: 1rem;
   padding-left: 2rem;
   transition: all 0.2s;
+  background-image: url(https://static-cse.canva.com/blob/140234/Rainbow-Gradient-Pink-and-Purple-Zoom-Virtual-Background.png);
+  border-right: none;
+  box-shadow: -1px 2px 4px rgba(0, 0, 0, 0.25), 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .search input[type="submit"] {
@@ -34,8 +41,11 @@
   border-top: 1px solid var(--gray);
   border-right: 1px solid var(--gray);
   border-bottom: 1px solid var(--gray);
+  border-left: none;
   cursor: pointer;
   transition: all 0.1s;
+  background-image: url(https://static-cse.canva.com/blob/140234/Rainbow-Gradient-Pink-and-Purple-Zoom-Virtual-Background.png);
+  box-shadow: -1px 2px 4px rgba(0, 0, 0, 0.25), 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .search-cont {
@@ -74,6 +84,10 @@
   max-width: 300px;
 }
 
+.card-container::-webkit-scrollbar {
+  display: none;
+}
+
 .card-container {
   list-style-type: none;
   padding: 0px;
@@ -81,6 +95,11 @@
   gap: 5px;
   flex-wrap: wrap;
   justify-content: center;
+  height:580px;
+    overflow:scroll;
+    overflow-x:hidden;
+    
+    /* box-shadow: -1px 2px 4px rgba(0, 0, 0, 0.25), 1px 1px 3px rgba(0, 0, 0, 0.1); */
 }
 
 .card-media {
@@ -123,10 +142,16 @@
 
 .card-title {
   text-align: center;
+  font-family: 'Yeseva One', cursive !important;
+  margin-top: 5% !important;
+  margin-bottom: 0;
 }
 
 .card-subtitle {
   text-align: center;
+  font-family: 'Yeseva One', cursive !important;
+  font-size: 105%;
+  margin-top: 0%;
 }
 
 .pose-diff {
@@ -165,4 +190,15 @@
   margin-bottom: 35px;
   display: flex;
   margin-left: 75px;
+}
+
+
+.desc {
+  width: 140px; 
+  border: 1px solid #000000;
+
+}
+
+.desc span{
+  word-break: break-all;
 }
