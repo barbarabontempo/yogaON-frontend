@@ -5,14 +5,14 @@ import "./navbar.css";
 import "../logo/yoganav.png";
 
 const Navbar = (props) => {
-
+console.log("navbar ", props)
   return (
     <div>  
 
         <>
       <div className="header-db">
           <div className="logo">
-            <Link to="/dashboard">
+            <Link to="/">
               <img
                 className="login-head-nav"
                 style={{ width: "40%" }}
@@ -33,6 +33,7 @@ const Navbar = (props) => {
                 <NavLink to="/goals">Goals</NavLink>
               </li>
               <li>
+                
                 <Link to="/" onClick={props.handleLogout}>
                   Logout
                 </Link>

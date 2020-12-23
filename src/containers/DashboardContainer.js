@@ -11,7 +11,7 @@ export default class DashboardContainer extends React.Component {
           <AllPosesContainer user={this.props.user}/>
           <video id="background-video" autoPlay loop>
             <source
-              src="https://static.dribbble.com/users/1804127/screenshots/11602664/media/2e9b09d0bb78593263e427b31f15a76c.mp4"
+              src="https://cdn.dribbble.com/users/1804127/screenshots/11602664/media/58622f5fb307da24d0542e939869a6d8.mp4"
               type="video/mp4"
             />
           </video>

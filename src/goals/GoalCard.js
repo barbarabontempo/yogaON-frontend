@@ -71,7 +71,7 @@ export default class PoseCard extends Component {
       ) : null
     );
 
-console.log("THE POSE LOGSZZZ", this.props.goal.id)
+console.log("THE POSE LOGSZZZ", this.props.goal)
 
     return (
       <li className="gcard">
@@ -91,7 +91,9 @@ console.log("THE POSE LOGSZZZ", this.props.goal.id)
           onFormSubmit={this.handleAddLog}
         />
         <div className="da-btns">
-        <button className="done" onClick={this.handleDoneClick}>I did it!</button>
+        
+        {  this.props.goal.completion === null ?
+          <button className="done" onClick={this.handleDoneClick}>I did it!</button> : null}
         <button className="delete" onClick={this.handleDeleteClick}>Delete</button>
         </div>
       </li>
