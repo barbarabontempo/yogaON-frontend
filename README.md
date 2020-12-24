@@ -1,68 +1,67 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![](./yogaon.png)
 
-## Available Scripts
+# yogaON 
+ A zen space for users to browse through yoga poses, track their goals, and meditate!
+ 
+## Description
 
-In the project directory, you can run:
+yogaON was created to help me maintain and track my yoga habit. Users can sign up for account, user authentication is implemented through use of sessions and Bcrypt. Once your signed in you can browse through over 40 yoga poses and each is accompanied with a detailed description on how to do the pose, a how-to video, and benefits. You can also set goals for yourself and track your progress with that goal every day! Best of all, if you are feeling overwhelemed you can chill out and meditate! 
+ 
+# Getting Started
 
-### `yarn start`
+ ## Prerequisites
+ 
+  1. To clone and run this application, youll need Git and Node.js  
+  2. Fork and Clone [yogaON BackEnd](https://github.com/barbarabontempo/yogaon-backend)
+  3. Install [Node.js and NPM](https://www.npmjs.com/get-npm)
+   `brew install node`
+  4. Run '$ rails s' in the folder that contains the yogaON BackEnd
+  
+## Starting the Frontend Server
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+ 1. Fork and Clone this repository and cd into directory
+ 2. Install all dependencies\
+  `$ npm install`
+ 3. Start the Frontend server this should open a webpage for you if not go to http://localhost:3001 \
+ `$ npm start`
+ 4. Type `$ y` or `$ yes` when prompted
+ 
+## How To Use
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+  When first starting up the application you will need to sign up with an username email and password. Once you are signed up you will be directed to the homepage and the fun will begin! You can browse through over 40 yoga poses, start some new goals, and meditate!
 
-### `yarn test`
+### Want to contribute?
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Make a pull request in a diffrent branch and do not fork :D 
 
-### `yarn build`
+## Visuals
+<details>
+  <summary> Login Page </summary> 
+    <img src="./loginpage.png" alt="Login Page"/>
+</details>
+<details>
+  <summary> Poses </summary> 
+    <img src="./posespage.png" alt="Poses Page"/>
+</details>
+<details>
+  <summary> Goals </summary> 
+    <img src="./goalspage.png" alt="Goals Page"/>
+</details>
+<details>
+  <summary> Meditate </summary> 
+    <img src="./meditatepage.png" alt="Meditate Page"/>
+</details>
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Please make sure to update tests as appropriate.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+[Go To Top](#Description)
+<a name="Description"></a>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
