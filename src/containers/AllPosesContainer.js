@@ -8,7 +8,7 @@ export default class AllPosesContainer extends Component {
       <>
         <div className="left-container">
           <h1 className="yoga-head">
-            Welcome to yogaON, Barbara!
+            Welcome to yogaON, Barbara!!
           </h1>
           <p className="yoga-par">
             Have you tried to build a yoga habit, just to watch it slowly fade
